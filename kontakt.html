@@ -1,11 +1,99 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kontakt</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <style>
+        .row {
+            display: flex;
+            gap: 16px;
+            padding: 16px 0px 16px 0px;
+            flex-wrap: wrap;
+        }
+
+        .box {
+            flex: 1;
+            min-width: 154px;
+        }
+
+        section {
+            margin: 48px 0px 48px 0px;
+        }
+    </style>
 </head>
-<body>
-    
+
+<body style="margin: 16px;">
+    <header><a id="backlink" href="/"><img src="img/logo.svg" alt="Startseite"></a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Startseite</a></li>
+                <li><a href="ueber-uns.html">Über uns</a></li>
+                <li><a href="angebote.html">Angebote</a></li>
+                <li><a tabindex="3" aria-current="page">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="section">
+        <img src="img/DSC02770.jpg"
+            alt="Ausschnitt der Beine eines Jungen, der neben mehreren Bällen auf einem Rasen steht"
+            style="height:200px;">
+        <!--Das hier ist nur ein Platzhalter-Bild und das inline-css ist nur für die Übersichtlichkeit der Seite-->
+        <h1>Kontakt</h1>
+    </section>
+    <section>
+        <h2>Formular</h2>
+        <p>Hast du Fragen? Ist dein Interesse geweckt oder hast du ein anderes Anliegen, bei der wir behilflich sein
+            können?</p>
+        <form action="/action_page.php">
+            <label for="fname">Vorname:</label><br>
+            <input type="text" id="fname" name="fname" placeholder="Dein Vorname"><br>
+            <label for="lname">Nachname:</label><br>
+            <input type="text" id="lname" name="lname" placeholder="Dein Nachname"><br><br>
+            <textarea id="w3review" name="w3review" rows="6" cols="70" placeholder="Deine Nachricht"></textarea> <br>
+            <input type="submit" value="Formular absenden">
+        </form>
+    </section>
+    <section>
+        <h2>Social Media</h2>
+        <div class="row">
+            <img class="box" src="img/DSC02770.jpg"
+                alt="Ausschnitt der Beine eines Jungen, der neben mehreren Bällen auf einem Rasen steht">
+            <div class="box">
+                <h3>Folge uns auf TikTok & Instagram!</h3>
+                <p>Du willst einen Blick hinter die Kulissen werfen?Dann schau auf unseren Social Media Kanälen vorbei!
+                </p>
+                <p>🎥 Auf TikTok gibt’s coole Trainingsclips, Challenges und Einblicke aus dem Camp-Alltag. <br>
+                    📸 Auf Instagram teilen wir Fotos, Termine, Updates und Storys direkt vom Platz.</p>
+                <p>
+                    Folge uns – und bleib am Ball! 
+                </p>
+                <a href="example.de">Folge uns Instagram</a>
+                <a href="example.de">Folge uns TikTok</a>
+            </div>
+        </div>
+    </section>
+    <footer class="row">
+        <div class="box">
+            <h4>Pro Fussball-Schule</h4>
+            <p>von Max Mustermann <br>
+                Kontakt: <br>
+                info@pro-fussballschule <br>
+                0123 456789
+            </p>
+        </div>
+        <div class="box">
+            <h4>Rechtliches</h4>
+            <a href="impressum.html">Impressum</a> <br>
+            <a href="datenschutzerklärung.html">Datenschutzerklärung</a>
+        </div>
+        <div class="box">
+            <h4>Folge uns auf Social Media</h4>
+            <a href="instagramm.de">Auf Instagram folgen</a> <br>
+            <a href="tiktok.de">Auf TikTok folgen</a>
+        </div>
+    </footer>
 </body>
 </html>
