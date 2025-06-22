@@ -1,0 +1,6 @@
+.row {
+    display: flex;
+    gap: 16px;
+    padding: 16px 0px 16px 0px;
+    flex-wrap: wrap;
+}
