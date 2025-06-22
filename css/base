@@ -1,0 +1,64 @@
+/* Farbvariablen */
+:root {
+  --primary: #C6271A;
+  --foreground-light: #fff;
+  --foreground-dark: #2C2B30;
+  --background-dark: #2C2B30;
+  --background-light: #fff;
+}
+
+/* Typografie */
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;           /* Basis-Schriftgröße */
+    line-height: 1.5;
+    color: var(--foreground-dark);
+    background-color: var(--background-light);
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Überschriften */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'MuseoModerno', cursive;
+    font-weight: 700;
+    color: var(--foreground-dark);
+    margin-top: 0;
+    margin-bottom: 0.5em;
+  }
+  
+  h1 {
+    font-size: 2.5rem;  /* ca. 40px */
+  }
+  
+  h2 {
+    font-size: 2rem;    /* ca. 32px */
+  }
+  
+  h3 {
+    font-size: 1.5rem;  /* ca. 24px */
+  }
+  
+  /* Links */
+  a {
+    color: var(--primary);
+    text-decoration: none;
+  }
+  
+  a:hover,
+  a:focus {
+    text-decoration: underline;
+  }
+  
+  /* Standard-Text */
+  p {
+    margin-top: 0;
+    margin-bottom: 1em;
+  }
+  
+  /* Listen */
+  ul, ol {
+    margin-top: 0;
+    margin-bottom: 1em;
+    padding-left: 1.5rem;
+  }
