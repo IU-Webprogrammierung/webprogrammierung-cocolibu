@@ -1,0 +1,13 @@
+.hero {
+background-image: url('../assets/img/DSC03278.jpg');
+background-size: cover;          /* Bild füllt die Fläche */
+background-position: center;     /* zentriert das Bild */
+background-repeat: no-repeat;    /* Bild nicht kacheln */
+min-height: 120pxpx;                /* Höhe, z.B. 60% der Viewport-Höhe */
+display: flex;                   /* zentrierter Inhalt */
+align-items: center;
+justify-content: center;
+text-align: center;
+color: white;                    /* Textfarbe, damit man es lesen kann */
+
+}

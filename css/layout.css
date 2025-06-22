@@ -1,0 +1,25 @@
+/* Max Content Width Content Container */
+.container {
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: var(--space-2);
+    padding-right: var(--space-2);
+  }
+  
+  /* Breakpoints */
+  
+  /* sm: 0 - 480px */
+  /* (meist kein spezielles Media Query nötig, da mobile first) */
+  
+  /* md: 481px - 768px */
+  @media (min-width: 481px) and (max-width: 768px) {
+  }
+  
+  /* lg: 769px - 1279px */
+  @media (min-width: 769px) and (max-width: 1279px) {
+  }
+  
+  /* xl: ab 1280px */
+  @media (min-width: 1280px) {
+  }

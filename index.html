@@ -7,6 +7,8 @@
     <title>Startseite</title>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
     <script src="js/loader.js" defer></script>
+    <script src="assets/js/menu.js"></script>
+    <script src="js/nav-current.js" defer></script>
     <!-- Google Fonts/Icons laden -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,37 +18,20 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <!-- Meine Styles -->
     <link rel="stylesheet" href="css/main.css">
-    <style>
-        .row {
-            display: flex;
-            gap: 16px;
-            flex-wrap: wrap;
-        }
-
-        .box {
-            flex: 1;
-            min-width: 154px;
-        }
-
-        section {
-            margin: 48px 0px 48px 0px;
-        }
-    </style>
+    <link rel="stylesheet" href="css/index.css">
 </head>
 
 <body style="margin: 16px;">
     <header id="header"></header>
-    <section class="section">
-        <img src="assets/img/DSC02770.jpg"
-            alt="Ausschnitt der Beine eines Jungen, der neben mehreren Bällen auf einem Rasen steht"
-            style="height:200px;">
-        <!--Das hier ist nur ein Platzhalter-Bild und das inline-css ist nur für die Übersichtlichkeit der Seite-->
-        <h1>Nachwuchsförderung mit Konzept</h1>
-        <p>Die Pro Fußballschule legt besonderen Wert auf die Freude an der Bewegung. Unsere Trainer schaffen ein
-            optimales (Trainings-)Umfeld für dein Kind, in dem es seiner Begeisterung nachgehen und sich optimal
-            entwickeln kann.
-        </p>
-        <a href="ueber-uns.html">Erfahre mehr zu unserem Konzept</a>
+    <section class="hero">
+        <div class="container">
+            <h1>Nachwuchsförderung mit Konzept</h1>
+            <p>Die Pro Fußballschule legt besonderen Wert auf die Freude an der Bewegung. Unsere Trainer schaffen ein
+                optimales (Trainings-)Umfeld für dein Kind, in dem es seiner Begeisterung nachgehen und sich optimal
+                entwickeln kann.
+            </p>
+            <a href="ueber-uns.html">Erfahre mehr zu unserem Konzept</a>
+        </div>
     </section>
     <section>
         <h2>Unsere Angebote</h2>
@@ -167,26 +152,7 @@
         </div>
         <a href="angebote.html">Alle Ferien-Camps anzeigen</a>
     </section>
-    <footer class="row">
-        <div class="box">
-            <h4>Pro Fussball-Schule</h4>
-            <p>von Max Mustermann <br>
-                Kontakt: <br>
-                info@pro-fussballschule <br>
-                0123 456789
-            </p>
-        </div>
-        <div class="box">
-            <h4>Rechtliches</h4>
-            <a href="impressum.html">Impressum</a> <br>
-            <a href="datenschutzerklärung.html">Datenschutzerklärung</a>
-        </div>
-        <div class="box">
-            <h4>Folge uns auf Social Media</h4>
-            <a href="instagramm.de">Auf Instagram folgen</a> <br>
-            <a href="tiktok.de">Auf TikTok folgen</a>
-        </div>
-    </footer>
+    <footer id="footer"></footer>
 </body>
 
 </html>

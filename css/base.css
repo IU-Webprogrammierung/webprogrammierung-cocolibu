@@ -5,12 +5,22 @@
   --foreground-dark: #2C2B30;
   --background-dark: #2C2B30;
   --background-light: #fff;
+
+  /* Spacing (8px Schritte) */
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 1.5rem;
+  --space-4: 2rem;
+  --space-5: 2.5rem;
+  --space-6: 3rem;
+  --space-7: 3.5rem;
+  --space-8: 4rem;
 }
 
 /* Typografie */
 body {
     font-family: 'Roboto', sans-serif;
-    font-size: 16px;           /* Basis-Schriftgröße */
+    font-size: 16px;
     line-height: 1.5;
     color: var(--foreground-dark);
     background-color: var(--background-light);
@@ -21,28 +31,37 @@ body {
   /* Überschriften */
   h1, h2, h3, h4, h5, h6 {
     font-family: 'MuseoModerno', cursive;
-    font-weight: 700;
+    letter-spacing: 0.1px;
     color: var(--foreground-dark);
     margin-top: 0;
     margin-bottom: 0.5em;
   }
   
   h1 {
-    font-size: 2.5rem;  /* ca. 40px */
+    font-size: 3rem;
+    font-weight: 700;
   }
   
   h2 {
-    font-size: 2rem;    /* ca. 32px */
+    font-size: 2.5rem;
+    font-weight: 700;
   }
   
   h3 {
-    font-size: 1.5rem;  /* ca. 24px */
+    font-size: 2rem;
+    font-weight: 600;
+  }
+
+  h4 {
+    font-size: 1.25rem;
+    font-weight: 600;
   }
   
   /* Links */
   a {
     color: var(--primary);
     text-decoration: none;
+    font-weight: 600;
   }
   
   a:hover,
@@ -50,11 +69,6 @@ body {
     text-decoration: underline;
   }
   
-  /* Standard-Text */
-  p {
-    margin-top: 0;
-    margin-bottom: 1em;
-  }
   
   /* Listen */
   ul, ol {
