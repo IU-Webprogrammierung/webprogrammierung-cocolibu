@@ -1,1 +1,4 @@
-$( "#header" ).load( "components/header.html" );
+// js/loader.js
+$(document).ready(function() {
+    $("#header").load("components/header.html");
+});
