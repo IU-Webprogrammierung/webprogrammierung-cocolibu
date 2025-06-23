@@ -18,53 +18,43 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <!-- Meine Styles -->
     <link rel="stylesheet" href="css/main.css">
-    <style>
-        .row {
-            display: flex;
-            gap: 16px;
-            padding: 16px 0px 16px 0px;
-            flex-wrap: wrap;
-        }
-
-        .box {
-            flex: 1;
-            min-width: 154px;
-        }
-
-        section {
-            margin: 48px 0px 48px 0px;
-        }
-    </style>
+    <link rel="stylesheet" href="css/kontakt.css">
 </head>
 
 <body>
     <header id="header"></header>
-    <section class="section">
+    <section class="intro-image">
         <img src="assets/img/DSC02770.jpg"
-            alt="Ausschnitt der Beine eines Jungen, der neben mehreren Bällen auf einem Rasen steht"
-            style="height:200px;">
-        <!--Das hier ist nur ein Platzhalter-Bild und das inline-css ist nur für die Übersichtlichkeit der Seite-->
-        <h1>Kontakt</h1>
+            alt="Ausschnitt der Beine eines Jungen, der neben mehreren Bällen auf einem Rasen steht">
     </section>
-    <section>
+    <section class="container">
+        <h1>Kontakt</h1>
         <h2>Formular</h2>
         <p>Hast du Fragen? Ist dein Interesse geweckt oder hast du ein anderes Anliegen, bei der wir behilflich sein
             können?</p>
         <form action="/action_page.php">
-            <label for="fname">Vorname:</label><br>
-            <input type="text" id="fname" name="fname" placeholder="Dein Vorname"><br>
-            <label for="lname">Nachname:</label><br>
-            <input type="text" id="lname" name="lname" placeholder="Dein Nachname"><br><br>
-            <textarea id="w3review" name="w3review" rows="6" cols="70" placeholder="Deine Nachricht"></textarea> <br>
+            <fieldset>
+                <legend>Deine Kontaktdaten</legend>
+                <label for="fname">Vorname:</label><br>
+                <input type="text" id="fname" name="fname" placeholder="Dein Vorname"><br>
+                <label for="lname">Nachname:</label><br>
+                <input type="text" id="lname" name="lname" placeholder="Dein Nachname"><br><br>
+            </fieldset>
+            <fieldset>
+                <legend>Deine Nachricht</legend>
+                <textarea id="w3review" name="w3review" rows="6" cols="70" placeholder="Deine Nachricht"></textarea> <br>
+            </fieldset>
             <input type="submit" value="Formular absenden">
         </form>
     </section>
     <section>
         <h2>Social Media</h2>
-        <div class="row">
-            <img class="box" src="assets/img/DSC02770.jpg"
-                alt="Ausschnitt der Beine eines Jungen, der neben mehreren Bällen auf einem Rasen steht">
-            <div class="box">
+        <article class="article-row">
+            <div class="article-image">
+                <img src="assets/img/DSC02770.jpg"
+                    alt="Ausschnitt der Beine eines Jungen, der neben mehreren Bällen auf einem Rasen steht">
+            </div>
+            <div class="panel">
                 <h3>Folge uns auf TikTok & Instagram!</h3>
                 <p>Du willst einen Blick hinter die Kulissen werfen?Dann schau auf unseren Social Media Kanälen vorbei!
                 </p>
@@ -73,10 +63,10 @@
                 <p>
                     Folge uns – und bleib am Ball!
                 </p>
-                <a href="example.de">Folge uns Instagram</a>
+                <a href="example.de">Folge uns Instagram</a> <br>
                 <a href="example.de">Folge uns TikTok</a>
             </div>
-        </div>
+        </article>
     </section>
     <footer id="footer"></footer>
 </body>

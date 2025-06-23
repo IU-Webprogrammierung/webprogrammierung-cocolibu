@@ -2,12 +2,13 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  box-sizing: border-card;
 }
 
 html, body {
   margin: 0;
   padding: 0;
+  background-color: var(--background-neutral);
 }
 
 /* Farbvariablen */
@@ -16,10 +17,13 @@ html, body {
   --foreground-light: #fff;
   --foreground-dark: #2C2B30;
   --background-dark: #2C2B30;
-  --background-neutral: #F0F1F3
   --background-light: #fff;
+  --background-neutral: #F0F1F3
 
+
+  /* Spacing */
   /* Spacing (8px Schritte) */
+  --space-1: 0.5rem;
   --space-1: 0.5rem;
   --space-2: 1rem;
   --space-3: 1.5rem;

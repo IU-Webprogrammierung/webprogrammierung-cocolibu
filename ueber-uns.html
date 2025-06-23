@@ -18,26 +18,20 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <!-- Meine Styles -->
     <link rel="stylesheet" href="css/main.css">
-    <style>
-        section {
-            margin: 48px 0px 48px 0px;
-        }
-    </style>
+    <link rel="stylesheet" href="css/ueber-uns.css">
 </head>
 
 <body>
     <header id="header"></header>
-    <section class="section">
+    <section class="intro-image">
         <img src="assets/img/DSC02770.jpg"
-            alt="Ausschnitt der Beine eines Jungen, der neben mehreren Bällen auf einem Rasen steht"
-            style="height:200px;">
-        <!--Das hier ist nur ein Platzhalter-Bild und das inline-css ist nur für die Übersichtlichkeit der Seite-->
-        <h1>Über uns</h1>
+            alt="Ausschnitt der Beine eines Jungen, der neben mehreren Bällen auf einem Rasen steht">
     </section>
+    <h1>Über uns</h1>
     <section>
         <h2>Unser Konzept</h2>
-        <div class="row">
-            <div class="box">
+        <article class="article-row">
+            <div class="panel">
                 <h3>Fußballtraining: Maßgeschneidert und für jedes Level</h3>
                 <p>Die Pro Fußballschule legt besonderen Wert auf die Freude an der Bewegung. Unsere Trainer schaffen
                     ein optimales (Trainings-)Umfeld für dein Kind, in dem es seiner Begeisterung nachgehen und sich
@@ -47,51 +41,60 @@
                     den Besten ihres Alters messen. Wir freuen uns, alle begleiten zu dürfen, die ihre sportliche
                     Entwicklung vorantreiben möchten.</p>
             </div>
-            <img class="box" src="assets/img/DSC02770.jpg"
-                alt="Ausschnitt der Beine eines Jungen, der neben mehreren Bällen auf einem Rasen steht">
-        </div>
-        <div class="row">
-            <img class="box" src="assets/img/DSC02770.jpg"
-                alt="Ausschnitt der Beine eines Jungen, der neben mehreren Bällen auf einem Rasen steht">
-            <div class="box">
-                <h3>Fußballtraining: Maßgeschneidert und für jedes Level</h3>
-                <p>Die Pro Fußballschule legt besonderen Wert auf die Freude an der Bewegung. Unsere Trainer schaffen
-                    ein optimales (Trainings-)Umfeld für dein Kind, in dem es seiner Begeisterung nachgehen und sich
-                    optimal entwickeln kann.</p>
-                <p>Wir betreuen Spielerinnen und Spieler unterschiedlichster Niveaus – von Anfängern, die erste
-                    Erfahrungen im Fußball sammeln, bis hin zu Spielern, die sich in den Nachwuchsleistungszentren mit
-                    den Besten ihres Alters messen. Wir freuen uns, alle begleiten zu dürfen, die ihre sportliche
-                    Entwicklung vorantreiben möchten.</p>
+            <div class="article-image">
+                <img src="assets/img/DSC02770.jpg"
+                    alt="Ausschnitt der Beine eines Jungen, der neben mehreren Bällen auf einem Rasen steht">
             </div>
-        </div>
+        </article>
+        <article class="article-row">
+            <div class="article-image">
+                <img src="assets/img/DSC02770.jpg"
+                    alt="Ausschnitt der Beine eines Jungen, der neben mehreren Bällen auf einem Rasen steht">
+            </div>
+            <div class="panel">
+                <h3>Super Sportler - Starke Persönlichkeiten</h3>
+                <p>Neben den Trainingsinhalten mit dem Ball wird bei uns vor allem die Persönlichkeitsentwicklung groß
+                    geschrieben. Respekt, Disziplin, Ehrgeiz und Mut sind nur einige der Werte, die wir vermitteln und
+                    stets selbst vorleben. Ein faires Miteinander und ein respektvoller Umgangston sind für uns von
+                    entscheidender Bedeutung und werden von Anfang an allen Spielern vermittelt. So schaffen wir eine
+                    positive Atmosphäre und ein Umfeld, in dem das volle Potenzial ausgeschöpft werden kann.</p>
+            </div>
+        </article>
     </section>
-    <section>
-        <h2>Unsere Angebote</h2>
-        <div class="row">
-            <div class="box">
+
+    <section class="container">
+        <h2>Unser Team</h2>
+        <div class="card-row">
+            <div class="card">
                 <img src="assets/img/DSC02770.jpg"
                     alt="Ausschnitt der Beine eines Jungen, der neben mehreren Bällen auf einem Rasen steht"
                     style="width:100%">
-                <h4>Nadine Lücke</h4>
-                <p>„Jedes Kind hat Potenzial – unsere Aufgabe ist es, es zu wecken, zu fördern und mit Freude zu
-                    begleiten. Fußball ist dabei nur der Anfang.“</p>
+                <div class="card-content">
+                    <h4>Nadine Lücke</h4>
+                    <p>"Jedes Kind hat Potenzial – unsere Aufgabe ist es, es zu wecken, zu fördern und mit Freude zu
+                        begleiten. Fußball ist dabei nur der Anfang."</p>
+                </div>
             </div>
-            <div class="box">
+            <div class="card">
                 <img src="assets/img/DSC02770.jpg"
                     alt="Ausschnitt der Beine eines Jungen, der neben mehreren Bällen auf einem Rasen steht"
                     style="width:100%">
-                <h4>Max Mustermann</h4>
-                <p>„Begeistern setzt begeistert sein voraus – so lautet mein Motto und mein Anspruch ist es, dich
-                    weiterzubringen. Ich freue mich auf dich!”</p>
+                <div class="card-content">
+                    <h4>Max Mustermann</h4>
+                    <p>„Begeistern setzt begeistert sein voraus – so lautet mein Motto und mein Anspruch ist es, dich
+                        weiterzubringen. Ich freue mich auf dich!”</p>
+                </div>
             </div>
-            <div class="box">
+            <div class="card">
                 <img src="assets/img/DSC02770.jpg"
                     alt="Ausschnitt der Beine eines Jungen, der neben mehreren Bällen auf einem Rasen steht"
                     style="width:100%">
-                <h4>Lukas Polonski</h4>
-                <p>„Ich erinnere mich noch, wie es war, selbst klein auf dem Platz zu stehen. Deshalb trainiere ich
-                    heute so, wie ich es mir damals gewünscht hätte.“
-                </p>
+                <div class="card-content">
+                    <h4>Lukas Polonski</h4>
+                    <p>„Ich erinnere mich noch, wie es war, selbst klein auf dem Platz zu stehen. Deshalb trainiere ich
+                        heute so, wie ich es mir damals gewünscht hätte.“
+                    </p>
+                </div>
             </div>
         </div>
     </section>

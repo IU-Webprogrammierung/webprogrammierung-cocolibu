@@ -93,7 +93,7 @@
 
                 li {
                     a {
-                        padding: 10px 15px;
+                        padding: var(--space-2) var(--space-2);
                         border-bottom: 1px solid #eee;
 
                         &:last-child {
@@ -119,6 +119,7 @@
     background-color: var(--primary);
     color: var(--foreground-light);
     padding: var(--space-4) var(--space-2);
+    margin-top: var(--space-8);
 
     & .row {
         display: flex;
@@ -128,7 +129,7 @@
         gap: var(--space-4);
         max-width: 1280px;
 
-        & .box {
+        & .column {
             flex: 1 1 auto;
             text-align: left;
 
@@ -178,16 +179,69 @@
 }
 
 .btn:active {
-    background-color: var(--primary-darker);
+    background-color: var(--primary);
 }
 
 /* Card-Komponente */
 .card {
     background: var(--background-light);
-    border-radius: 8px;
+    border-radius: 16px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.05), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
 
     & .card-content {
         padding: var(--space-2);
     }
+
+    & img {
+        border-radius: 16px 16px 0px 0px;
+    }
+}
+
+/* Intro-Image-Komponente */
+.intro-image {
+    width: 100%;
+    height: 240px;
+    overflow: hidden;
+    margin-bottom: var(--space-2);
+  }
+  
+  .intro-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+  }
+
+
+  /* Article-Komponente */
+article {
+width: 100%;
+display: flex;
+max-width: 1280px;
+margin: 0 auto;  
+justify-content: center;
+align-items: center;
+margin-bottom: var(--space-6);
+
+    & .panel {
+    flex: 2;
+    border: 2px solid var(--foreground-dark);
+    border-radius: 8px;
+    padding: var(--space-2);
+    }
+
+    & .article-image {
+        flex: 1;
+        overflow: hidden;
+        border-radius: 8px;
+        min-width: 300px;
+      }
+      
+        & .article-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
 }
