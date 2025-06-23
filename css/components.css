@@ -38,7 +38,7 @@
             list-style: none;
             margin: 0;
             padding: var(--space-3);
-            background: white;
+            background: var(--background-light);
             border-radius: 4px;
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.05), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
 
@@ -62,7 +62,7 @@
     #menu-toggle {
         display: none;
         font-size: 24px;
-        background: none;
+        background: var(--background-light);
         border: none;
         cursor: pointer;
     }
@@ -111,8 +111,8 @@
         #main-nav.active ul {
             display: flex;
         }
-        }
     }
+}
 
 /* Footer-Komponente */
 #footer {
@@ -150,5 +150,44 @@
                 margin: 0;
             }
         }
+    }
+}
+
+/* Button-Komponente */
+.btn {
+    display: inline-block;
+    padding: var(--space-1) var(--space-2);
+    background-color: var(--primary);
+    color: var(--foreground-light);
+    border-radius: 1000000px;
+    text-decoration: none;
+    cursor: pointer;
+    user-select: none;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover{
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.08) 0%, rgba(0, 0, 0, 0.08) 100%), var(--primary);
+    ;
+    text-decoration: none;
+}
+.btn:focus-visible {
+    outline: 2px solid var(--foreground-dark);
+    outline-offset: 2px;
+}
+
+.btn:active {
+    background-color: var(--primary-darker);
+}
+
+/* Card-Komponente */
+.card {
+    background: var(--background-light);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.05), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+
+    & .card-content {
+        padding: var(--space-2);
     }
 }

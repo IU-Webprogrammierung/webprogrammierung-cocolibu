@@ -1,9 +1,22 @@
+/* --- Minimal CSS Reset --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
 /* Farbvariablen */
 :root {
   --primary: #C6271A;
   --foreground-light: #fff;
   --foreground-dark: #2C2B30;
   --background-dark: #2C2B30;
+  --background-neutral: #F0F1F3
   --background-light: #fff;
 
   /* Spacing (8px Schritte) */
@@ -38,13 +51,15 @@ body {
   }
   
   h1 {
-    font-size: 3rem;
+    font-size: 4rem;
     font-weight: 700;
+    text-align: center;
   }
   
   h2 {
     font-size: 2.5rem;
     font-weight: 700;
+    text-align: center;
   }
   
   h3 {
