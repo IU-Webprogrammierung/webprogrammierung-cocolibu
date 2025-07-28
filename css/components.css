@@ -234,8 +234,12 @@
     background: var(--background-light);
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow-light);
+    width: 100%;
 
     & .card-content {
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-2);
         padding: var(--space-2);
     }
 
@@ -243,10 +247,49 @@
         border-radius: var(--radius-lg) var(--radius-lg) 0px 0px;
     }
 
-@media screen and (min-width: 481px) and (max-width: 768px) {
-    .card-image img {
-        height: 20vh;
+    & a {
+        align-self: flex-start;
+        width: auto;
     }
+}
+
+.card-image-max-width {
+    max-width: 18rem;
+}
+
+/* Event-Card-Komponente */
+.event-card {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: var(--space-2);
+    border: 2px solid var(--foreground-dark);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+
+    & img {
+        width: 33%;
+        object-fit: cover;
+    }
+
+    & .card-content-middle {
+        padding: var(--space-3);
+        width: 33%;
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-2);
+    }
+    & .card-content-last {
+        padding: var(--space-3);
+        width: 33%;
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-2);
+
+        & a {
+            align-self: flex-start;
+            width: auto;
+        }
     }
 }
 
@@ -297,6 +340,11 @@ margin-bottom: var(--space-6);
             object-fit: cover;
             display: block;
         }
+}
+@media (min-width: 481px) and (max-width: 768px) {
+    .article-image {
+        display: none;
+    }
 }
 
 /* Carousel-Komponente */

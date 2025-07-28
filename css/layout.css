@@ -21,6 +21,14 @@
     text-align: center;
   }
   
+/* Icons */
+  .icon {
+    vertical-align: middle;
+    font-size: 32px;
+    margin-top: -4px;
+    color: var(--foreground-dark);
+  }
+
 /* Breakpoints */
 
 /* sm: 0 - 480px */
@@ -28,12 +36,30 @@
   h1 {
       font-size: 3rem;
     }
+  .event-card img {
+    display: none;
+  }
+  .card-grid {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--space-2);
+    width: 100%;
+  }
   .card-row {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
     justify-content: center;
     gap: var(--space-2);
+    width: 100%;
+  }
+  .card-image img {
+    height: 20vh;
+    object-fit: cover;
+    width: 100%;
   }
   article {
     flex-direction: column;
@@ -45,12 +71,31 @@
   h1 {
       font-size: 3rem;
     }
+  .event-card img {
+    display: none;
+  }
+  .card-grid {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+    width: 100%;
+  }
   .card-row {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
     gap: var(--space-2);
+    width: 100%;
   }
+
+  .card-image img {
+    height: 25vh;
+    object-fit: cover;
+    width: 100%;
+  }
+
   article {
       flex-direction: column;
   }
@@ -58,18 +103,48 @@
 
 /* lg: 769px - 1279px */
 @media (min-width: 769px) and (max-width: 1279px) {
+  .card-grid {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: var(--space-2);
+    flex-wrap: wrap;
+    width: 100%;
+  }
   .card-row {
       display: flex;
-      gap: 1rem;
+      flex-direction: row;
+      gap: var(--space-2);
       flex-wrap: nowrap;
+      width: 100%;
     }
+  .card-image img {
+    height: 30vh;
+    object-fit: cover;
+    width: 100%;
+  }
 }
 
 /* xl: ab 1280px */
 @media (min-width: 1280px) {
+  .card-grid {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: var(--space-2);
+    flex-wrap: wrap;
+    width: 100%;
+  }
   .card-row {
       display: flex;
+      flex-direction: row;
       gap: var(--space-2);
       flex-wrap: nowrap;
+      width: 100%;
     }
+  .card-image img {
+    height: 30vh;
+    object-fit: cover;
+    width: 100%;
+  }
 }
