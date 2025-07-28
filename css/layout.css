@@ -29,6 +29,10 @@
     color: var(--foreground-dark);
   }
 
+.article-row {
+  padding: var(--space-2);
+}
+
 /* Breakpoints */
 
 /* sm: 0 - 480px */
