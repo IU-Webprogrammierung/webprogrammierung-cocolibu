@@ -1,5 +1,5 @@
 $(function () {
-    $('#header').load('header.html', function () {
+    $('#header').load('components/header.html', function () {
       const currentPath = window.location.pathname.split("/").pop() || "index.html";
   
       $('#header nav a').each(function () {

@@ -1,5 +1,4 @@
 /* Header-Komponente */
-/*die Mobile Variante des navs funktioniert noch nicht, mehr Recherche nötig*/
 #header {
     position: sticky;
     top: 0;
@@ -11,108 +10,146 @@
     max-width: 1280px;
     margin: 0 auto;
     gap: var(--space-1);
+}
 
-    #backlink {
+    /* Logo-Container */
+    #logo-container {
         display: flex;
         align-items: center;
         background: white;
-        border-radius: 4px;
-        padding: 6px;
-
+        border-radius: var(--radius-md);
+        height: 4.5rem;
+        padding: 0 var(--space-2) 0 var(--space-2);
+        box-shadow: var(--shadow-light)
+    }
         .logo-desktop {
             display: block;
-            height: 60px;
+            min-height: 3rem;
         }
-
         .logo-mobile {
             display: none;
-            height: 60px;
+            min-height: 3rem;
         }
-    }
 
-    nav {
+    /* Navigation */
+    #main-nav {
         ul {
             display: flex;
-            flex-wrap: nowrap;
-            gap: var(--space-2);
+            gap: var(--space-1);
             list-style: none;
             margin: 0;
-            padding: var(--space-3);
+            padding: 0 var(--space-2) 0 var(--space-2);
+            height: 4.5rem;
+            align-items: center;
             background: var(--background-light);
-            border-radius: 4px;
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.05), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-light)
+        }
 
-            li {
-                a {
-                    white-space: nowrap;
-                    padding: var(--space-1) var(--space-2);
-                    border-radius: 4px;
-                    text-decoration: none;
+        li {
+            a {
+                padding: var(--space-1) var(--space-1);
+                border-radius: var(--radius-sm);
+                text-decoration: none;
+                white-space: nowrap;
+            }
 
-                    &:hover,
-                    &[aria-current="page"] {
-                        background-color: var(--primary);
-                        color: white;
-                    }
-                }
+            a:hover {
+                border-bottom: 2px solid var(--primary);
+                border-radius: 0px;
+            }
+
+            a[aria-current="page"] {
+                background-color: var(--primary);
+                color: white;
+                border-bottom: 0px;
+                border-radius: var(--radius-sm);
+                cursor: default;
             }
         }
     }
 
+    /* Menü-Button */
     #menu-toggle {
         display: none;
         font-size: 24px;
         background: var(--background-light);
+        border-radius: var(--radius-md);
+        height: 4.5rem;
+        width: 4.5rem;
+        box-shadow: var(--shadow-light);
         border: none;
         cursor: pointer;
+        z-index: 1000;
     }
 
+    #menu-toggle:hover {
+        background: var(--background-neutral);
+        border: 1px solid var(--foreground-light);
+    }
+
+    /* Mobile Styles */
     @media (max-width: 768px) {
-        #backlink {
-            .logo-desktop {
-                display: none;
-            }
-
-            .logo-mobile {
-                display: block;
-            }
+        /* Logo für mobile Ansicht */
+        #logo-container .logo-desktop {
+            display: none;
         }
 
-        nav {
-            ul {
-                flex-direction: column;
-                gap: 0;
-                display: none;
-                background: white;
-                position: absolute;
-                top: 60px;
-                right: 20px;
-                width: 200px;
-                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-                border-radius: 4px;
-
-                li {
-                    a {
-                        padding: var(--space-2) var(--space-2);
-                        border-bottom: 1px solid #eee;
-
-                        &:last-child {
-                            border-bottom: none;
-                        }
-                    }
-                }
-            }
+        #logo-container .logo-mobile {
+            display: block;
         }
 
+        /* Menü-Button für mobile Ansicht */
         #menu-toggle {
             display: block;
         }
 
+        /* Menü anzeigen, wenn "active"-Klasse hinzugefügt wird */
         #main-nav.active ul {
             display: flex;
         }
+        #main-nav.active{
+            display: flex;
+            right: 0rem;
+        }
+
+        /* Mobile Navigation */
+        #main-nav {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 100%;
+            height: 100%;
+            background-color: var(--background-dark);
+            opacity: 95%;
+            transition: right 0.5s ease;
+            z-index: 900;
+          }
+
+        #main-nav ul {
+            flex-direction: column;
+            height: 100%;
+            width: 100%;
+            background-color: transparent;
+            padding-top: 6rem;
+            gap: var(--space-2);
+            cursor: default;
+        }
+
+        #main-nav ul li {
+            width: 100%;
+        }
+
+        #main-nav ul li a {
+            color: var(--foreground-light);
+            display: block;
+            text-align: center;
+        }
     }
-}
 
 /* Footer-Komponente */
 #footer {

@@ -18,12 +18,9 @@ html, body {
   --foreground-dark: #2C2B30;
   --background-dark: #2C2B30;
   --background-light: #fff;
-  --background-neutral: #F0F1F3
-
+  --background-neutral: #F0F1F3;
 
   /* Spacing */
-  /* Spacing (8px Schritte) */
-  --space-1: 0.5rem;
   --space-1: 0.5rem;
   --space-2: 1rem;
   --space-3: 1.5rem;
@@ -32,7 +29,17 @@ html, body {
   --space-6: 3rem;
   --space-7: 3.5rem;
   --space-8: 4rem;
+
+  /* Border-Radius */
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 1rem;
+  --radius-full: 9999px;
+
+  /* Elevation */
+  --shadow-light: 0 4px 8px rgba(0, 0, 0, 0.05), 0 6px 20px rgba(0, 0, 0, 0.1);
 }
+
 
 /* Typografie */
 body {
