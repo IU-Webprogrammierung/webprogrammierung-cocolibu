@@ -9,6 +9,7 @@ html, body {
   margin: 0;
   padding: 0;
   background-color: var(--background-neutral);
+  width: 100%;
 }
 
 /* Farbvariablen */
@@ -58,7 +59,7 @@ body {
     letter-spacing: 0.1px;
     color: var(--foreground-dark);
     margin-top: 0;
-    margin-bottom: 0.5em;
+    margin-bottom: 0.5rem;
   }
   
   h1 {

@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Startseite</title>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js" defer></script>
+    <script src="js/carousel.js" defer></script>
     <script src="js/loader.js" defer></script>
     <script src="js/menu.js"></script>
     <script src="js/nav-current.js" defer></script>
@@ -23,21 +25,31 @@
 
 <body>
     <header id="header"></header>
+    
+    <!-- Hero-Section -->
     <section class="hero">
         <!-- Kein Alt-Text, da Bild rein dekorativ ist, mobile Variante erarbeiten -->
         <div class="container">
-            <h1>Nachwuchsförderung mit Konzept</h1>
-            <p>Die Pro Fußballschule legt besonderen Wert auf die Freude an der Bewegung. Unsere Trainer schaffen ein
-                optimales (Trainings-)Umfeld für dein Kind, in dem es seiner Begeisterung nachgehen und sich optimal
-                entwickeln kann.
-            </p>
+            <h1>Nachwuchs-Förderung mit Konzept</h1>
+        </div>
+    </section>
+
+    <!-- Info-Container -->
+    <section class="container">
+        <p>Die Pro Fußballschule legt besonderen Wert auf die Freude an der Bewegung. Unsere Trainer schaffen ein
+            optimales (Trainings-)Umfeld für dein Kind, in dem es seiner Begeisterung nachgehen und sich optimal
+            entwickeln kann.
+        </p>
+        <div class="horizontally-centered">
             <a href="ueber-uns.html" role="button" class="btn" aria-pressed="false">Erfahre mehr zu unserem Konzept</a>
         </div>
     </section>
+
+    <!-- Unsere Angebote -->
     <section class="container">
         <h2>Unsere Angebote</h2>
         <div class="card-row">
-            <div class="card">
+            <div class="card-image">
                 <img src="assets/img/DSC02770.jpg"
                     alt="Ausschnitt der Beine eines Jungen, der neben mehreren Bällen auf einem Rasen steht"
                     style="width:100%">
@@ -48,7 +60,7 @@
                         arbeiten. </p>
                 </div>
             </div>
-            <div class="card">
+            <div class="card-image">
                 <img src="assets/img/DSC02770.jpg"
                     alt="Ausschnitt der Beine eines Jungen, der neben mehreren Bällen auf einem Rasen steht"
                     style="width:100%">
@@ -58,7 +70,7 @@
                         spannender Turniere.</p>
                 </div>
             </div>
-            <div class="card">
+            <div class="card-image">
                 <img src="assets/img/DSC02770.jpg"
                     alt="Ausschnitt der Beine eines Jungen, der neben mehreren Bällen auf einem Rasen steht"
                     style="width:100%">
@@ -71,40 +83,54 @@
                 </div>
             </div>
         </div>
-        <div id="section-button">
+        <div class="section-button">
             <a href="angebote.html" role="button" class="btn" aria-pressed="false">Mehr zu unseren Angeboten</a>
         </div>
     </section>
-    <section class="container">
-        <h2>Was sagen die Kinder dazu?</h2>
-        <p id="p-parents-feedback">...und natürlich die Eltern</p>
-        <div class="card-row">
-            <button><i class="material-icons">chevron_left</i></button>
-            <div class="card">
-                <p>„Das Camp war richtig cool! Wir haben viel Fußball gespielt, neue Freunde gefunden und die Trainer
-                    waren mega nett. Ich will nächstes Mal auf jeden Fall wieder mitmachen!“</p>
-                <p>- Noah Klein</p>
+
+    <!-- Kundenzitate -->
+    <section class="section-dark">
+        <h2 class="h2-dark">Was sagen die Kinder dazu?</h2>
+        <p class="subtitle-dark">...und natürlich die Eltern</p>
+      
+        <div class="carousel swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide carousel-card">
+              <blockquote>„Das Camp war richtig cool! Wir haben viel Fußball gespielt, neue Freunde gefunden und die Trainer
+                waren mega nett. Ich will nächstes Mal auf jeden Fall wieder mitmachen!“</blockquote>
+              <p>- Noah Klein</p>
+              <audio id="audio1" src="assets/mp3/noah-klein.mp3"></audio>
+              <button data-audio="audio1" class="btn">▶</button>
             </div>
-            <div class="card">
-                <p>„Unser Kind hatte riesigen Spaß am Camp! Tolle Trainer, super Organisation – und ganz nebenbei viel
-                    gelernt, sportlich und menschlich. Wir sind begeistert!“</p>
-                <p>- Katherina Neumann</p>
+      
+            <div class="swiper-slide carousel-card">
+              <blockquote>„Unser Kind hatte riesigen Spaß am Camp! Tolle Trainer, super Organisation – und ganz nebenbei viel
+                gelernt, sportlich und menschlich. Wir sind begeistert!“</blockquote>
+              <p>- Katherina Neumann</p>
+              <audio id="audio2" src="assets/mp3/katherina-neumann.mp3"></audio>
+              <button data-audio="audio2" class="btn">▶</button>
             </div>
-            <div class="card">
-                <p>„Das Camp war richtig cool! Ich hab viele Tore geschossen und neue Freunde kennengelernt. Am besten
-                    fand ich das Abschlussspiel. Ich will nächstes Mal unbedingt wieder dabei sein!“
-                </p>
-                <p>- Luca Müller</p>
+      
+            <div class="swiper-slide carousel-card">
+              <blockquote>„Das Camp war super! Ich hab viele Tore geschossen und neue Freunde kennengelernt. Am besten
+                fand ich das Abschlussspiel. Ich will nächstes Mal unbedingt wieder dabei sein!“</blockquote>
+              <p>- Luca Müller</p>
+              <audio id="audio3" src="assets/mp3/luca-müller.mp3"></audio>
+              <button data-audio="audio3" class="btn">▶</button>
             </div>
-            <div class="card">
-                <p>„Emily war jeden Tag mit Begeisterung dabei. Die Trainer haben eine tolle Mischung aus Spaß, Bewegung
-                    und Teamgeist vermittelt. Für uns als Eltern war es schön zu sehen, wie wohl er sich gefühlt hat.“
-                </p>
-                <p>- Thomas Meier</p>
+      
+            <div class="swiper-slide carousel-card">
+              <blockquote>„Emily war jeden Tag mit Begeisterung dabei. Die Trainer haben eine tolle Mischung aus Spaß, Bewegung
+                und Teamgeist vermittelt. Für uns als Eltern war es schön zu sehen, wie wohl er sich gefühlt hat.“</blockquote>
+              <p>- Lara Bauer</p>
+              <audio id="audio4" src="assets/mp3/lars-bauer.mp3"></audio>
+              <button data-audio="audio4" class="btn">▶</button>
             </div>
-            <button><i class="material-icons">chevron_right</i></button>
+          </div>
         </div>
-    </section>
+      </section>
+
+    <!-- Aktuelle Angebote -->
     <section class="container">
         <h2>Was steht an?</h2>
         <div>
@@ -164,6 +190,7 @@
             <a href="angebote.html" role="button" class="btn" aria-pressed="false">Alle Ferien-Camps anzeigen</a>
         </div>
     </section>
+
     <footer id="footer"></footer>
 </body>
 

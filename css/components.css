@@ -1,13 +1,16 @@
 /* Header-Komponente */
 #header {
-    position: sticky;
+    position: fixed;
     top: 0;
     z-index: 1000;
+    left: 50%;
+    transform: translateX(-50%);
     padding: var(--space-1) var(--space-3);
     display: flex;
     align-items: center;
     justify-content: space-between;
     max-width: 1280px;
+    width:100%;
     margin: 0 auto;
     gap: var(--space-1);
 }
@@ -123,7 +126,7 @@
             top: 0;
             right: -100%;
             width: 100%;
-            height: 100%;
+            height: 100vh;
             background-color: var(--background-dark);
             opacity: 95%;
             transition: right 0.5s ease;
@@ -197,7 +200,7 @@
     padding: var(--space-1) var(--space-2);
     background-color: var(--primary);
     color: var(--foreground-light);
-    border-radius: 1000000px;
+    border-radius: var(--radius-full);
     text-decoration: none;
     cursor: pointer;
     user-select: none;
@@ -220,17 +223,30 @@
 }
 
 /* Card-Komponente */
-.card {
+.basic-card {
     background: var(--background-light);
-    border-radius: 16px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.05), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-light);
+    padding: var(--space-2);
+}
+
+.card-image {
+    background: var(--background-light);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-light);
 
     & .card-content {
         padding: var(--space-2);
     }
 
     & img {
-        border-radius: 16px 16px 0px 0px;
+        border-radius: var(--radius-lg) var(--radius-lg) 0px 0px;
+    }
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    .card-image img {
+        height: 20vh;
+    }
     }
 }
 
@@ -271,7 +287,7 @@ margin-bottom: var(--space-6);
     & .article-image {
         flex: 1;
         overflow: hidden;
-        border-radius: 8px;
+        border-radius: var(--radius-md);
         min-width: 300px;
       }
       
@@ -282,3 +298,35 @@ margin-bottom: var(--space-6);
             display: block;
         }
 }
+
+/* Carousel-Komponente */
+.carousel-card {
+    background: var(--background-light);
+    border-radius: var(--radius-lg);
+    padding: var(--space-2);
+    box-shadow: var(--shadow-light);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+    align-items: center;
+    text-align: center;
+    height: 100%;
+  }
+  
+  .carousel {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding: var(--space-2);
+  }
+  
+  .swiper-wrapper {
+    display: flex;
+    transition-property: transform;
+  }
+  
+  .swiper-slide {
+    flex-shrink: 0.1;
+    box-sizing: border-box;
+  }
+  
